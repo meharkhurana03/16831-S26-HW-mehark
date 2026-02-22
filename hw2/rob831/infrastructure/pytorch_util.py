@@ -43,13 +43,21 @@ def build_mlp(
         returns:
             output_placeholder: the result of a forward pass through the hidden layers + the output layer
     """
+
     if isinstance(activation, str):
         activation = _str_to_activation[activation]
     if isinstance(output_activation, str):
         output_activation = _str_to_activation[output_activation]
+    layers = []
+    in_size = input_size
+    for _ in range(n_layers):
+        layers.append(nn.Linear(in_size, size))
+        layers.append(activation)
+        in_size = size
+    layers.append(nn.Linear(in_size, output_size))
+    layers.append(output_activation)
     
-    # TODO: get this from hw1
-    raise NotImplementedError
+    return nn.Sequential(*layers)
 
 
 device = None
