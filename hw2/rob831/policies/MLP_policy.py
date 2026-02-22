@@ -151,7 +151,14 @@ class MLPPolicyPG(MLPPolicy):
         # HINT4: use self.optimizer to optimize the loss. Remember to
             # 'zero_grad' first
 
-        raise NotImplementedError
+        # raise NotImplementedError
+        self.optimizer.zero_grad()
+        action_dist = self(observations)
+        log_probs = action_dist.log_prob(actions)
+
+        policy_loss = -(log_probs * advantages).mean()
+        policy_loss.backward()
+        self.optimizer.step()
 
         if self.nn_baseline:
             ## TODO: update the neural network baseline using the q_values as

@@ -47,7 +47,12 @@ class PGAgent(BaseAgent):
         # HINT2: look at the MLPPolicyPG class for how to update the policy
             # and obtain a train_log
 
-        raise NotImplementedError
+        # raise NotImplementedError
+        q_values = self.calculate_q_vals(rewards_list)
+
+        advantages = self.estimate_advantage(observations, rewards_list, q_values, terminals)
+        train_log = self.actor.update(observations, actions, advantages, q_values=q_values)
+
 
         return train_log
 
@@ -75,12 +80,14 @@ class PGAgent(BaseAgent):
 
         if not self.reward_to_go:
             #use the whole traj for each timestep
-            raise NotImplementedError
+            # raise NotImplementedError
+            q_values = np.concatenate([self._discounted_return(r) for r in rewards_list])
 
         # Case 2: reward-to-go PG
         # Estimate Q^{pi}(s_t, a_t) by the discounted sum of rewards starting from t
         else:
-            raise NotImplementedError
+            # raise NotImplementedError
+            q_values = np.concatenate([self._discounted_cumsum(r) for r in rewards_list])
 
         return q_values  # return an array
 
@@ -172,7 +179,11 @@ class PGAgent(BaseAgent):
         """
 
         # TODO: create discounted_returns
-        raise NotImplementedError
+        # raise NotImplementedError
+        total_timesteps = len(rewards)
+        discounts = [self.gamma ** t for t in range(total_timesteps)] # all the discounts
+        discounted_returns = np.array(discounts) * np.array(rewards) # elementwise multiply
+        discounted_returns = np.sum(discounted_returns) * np.ones(total_timesteps) # broadcast to all timesteps
 
         return discounted_returns
 
@@ -186,6 +197,13 @@ class PGAgent(BaseAgent):
         # TODO: create `discounted_cumsums`
         # HINT: it is possible to write a vectorized solution, but a solution
             # using a for loop is also fine
-        raise NotImplementedError
+        # raise NotImplementedError
+        total_timesteps = len(rewards)
+        discounted_cumsums = np.zeros(total_timesteps)
+        for t in range(total_timesteps-1, -1, -1):
+            if t == total_timesteps - 1:
+                discounted_cumsums[t] = rewards[t]
+            else:
+                discounted_cumsums[t] = rewards[t] + self.gamma * discounted_cumsums[t + 1]
 
         return discounted_cumsums
