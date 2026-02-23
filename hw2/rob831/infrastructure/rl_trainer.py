@@ -3,6 +3,7 @@ import pickle
 import os
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 
 import gym
 from gym import wrappers
@@ -166,8 +167,13 @@ class RL_Trainer(object):
             num_transitions_to_sample = self.params['batch_size']
 
         print("\nCollecting data to be used for training...")
-        paths, envsteps_this_batch = utils.sample_trajectories(
-            self.env, collect_policy, num_transitions_to_sample, self.params['ep_len'])
+        parallel_workers = self.params.get('parallel_workers', 1)
+        if parallel_workers > 1:
+            paths, envsteps_this_batch = self._parallel_sample(
+                collect_policy, num_transitions_to_sample, parallel_workers)
+        else:
+            paths, envsteps_this_batch = utils.sample_trajectories(
+                self.env, collect_policy, num_transitions_to_sample, self.params['ep_len'])
 
         train_video_paths = None
         if self.log_video:
@@ -175,6 +181,36 @@ class RL_Trainer(object):
             train_video_paths = utils.sample_n_trajectories(self.env, collect_policy, MAX_NVIDEO, MAX_VIDEO_LEN, True)
 
         return paths, envsteps_this_batch, train_video_paths
+
+    def _parallel_sample(self, policy, min_timesteps, parallel_workers):
+        """This function uses a ThreadPoolExecutor to parallelize sampling of trajectories across n_workers workers"""
+
+        import math
+        steps_per_worker = math.ceil(min_timesteps / parallel_workers)
+        # E.g. if batch_size is 1000 and parallel_workers is 4, then each worker should sample at least 250 steps, so steps_per_worker is 250. If batch_size were 1001 instead, then steps_per_worker would be 251, so that we still get at least 1001 steps in total across the 4 workers.
+
+        def worker_fn(worker_idx):
+            local_env = gym.make(self.params['env_name'])
+
+            # use different seed for each worker, but still deterministic based on the base seed
+            local_env.seed(self.params['seed'] + worker_idx + 1)
+
+            # run rollout
+            local_paths, local_steps = [], 0
+            while local_steps < steps_per_worker:
+                path = utils.sample_trajectory(local_env, policy, self.params['ep_len'])
+                local_paths.append(path)
+                local_steps += utils.get_pathlength(path)
+            
+            local_env.close()
+            return local_paths
+
+        with ThreadPoolExecutor(max_workers=parallel_workers) as executor:
+            results = list(executor.map(worker_fn, range(parallel_workers)))
+
+        paths = [p for result in results for p in result]
+        envsteps_this_batch = sum(utils.get_pathlength(p) for p in paths)
+        return paths, envsteps_this_batch
 
     def train_agent(self):
         # TODO: get this from hw1

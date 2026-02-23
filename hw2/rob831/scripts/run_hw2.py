@@ -84,6 +84,8 @@ def main():
     parser.add_argument('--save_params', action='store_true')
     parser.add_argument('--action_noise_std', type=float, default=0)
 
+    parser.add_argument('--parallel_workers', type=int, default=1)
+
     args = parser.parse_args()
 
     # convert to dictionary

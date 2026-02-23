@@ -156,7 +156,7 @@ class MLPPolicyPG(MLPPolicy):
         action_dist = self(observations)
         log_probs = action_dist.log_prob(actions)
 
-        policy_loss = -(log_probs * advantages).mean()
+        policy_loss = -(log_probs*advantages).mean()
         policy_loss.backward()
         self.optimizer.step()
 
