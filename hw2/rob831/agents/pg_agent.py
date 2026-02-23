@@ -135,8 +135,13 @@ class PGAgent(BaseAgent):
                         ## 0 otherwise.
                     ## HINT 2: self.gae_lambda is the lambda value in the
                         ## GAE formula
-                    raise NotImplementedError
+                    # raise NotImplementedError
+                    
+                    # delta_t = r_t + gamma*V(s_{t+1})*(1-terminal) - V(s_t)
+                    # A_t = delta_t + gamma*lambda*(1-terminal)*A_{t+1}
 
+                    delta = rewards[i] + self.gamma*values[i + 1]*(1-terminals[i]) - values[i]
+                    advantages[i] = delta + self.gamma*self.gae_lambda*(1-terminals[i])*advantages[i+1]
 
 
                 # remove dummy advantage
