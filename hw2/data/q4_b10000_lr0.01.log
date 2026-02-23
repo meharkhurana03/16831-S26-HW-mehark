@@ -1,0 +1,1401 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+/home/mehark/.local/lib/python3.10/site-packages/gym/core.py:329: DeprecationWarning: [33mWARN: Initializing wrapper in old step API which returns one bool instead of two. It is recommended to set `new_step_api=True` to use new step API. This will be the default behaviour in future.[0m
+  deprecation(
+/home/mehark/.local/lib/python3.10/site-packages/gym/wrappers/step_api_compatibility.py:39: DeprecationWarning: [33mWARN: Initializing environment in old step API which returns one bool instead of two. It is recommended to set `new_step_api=True` to use new step API. This will be the default behaviour in future.[0m
+  deprecation(
+/home/mehark/.local/lib/python3.10/site-packages/gym/core.py:268: DeprecationWarning: [33mWARN: Function `env.seed(seed)` is marked as deprecated and will be removed in the future. Please use `env.reset(seed=seed)` instead.[0m
+  deprecation(
+/home/mehark/.local/lib/python3.10/site-packages/gym/utils/passive_env_checker.py:241: DeprecationWarning: `np.bool8` is a deprecated alias for `np.bool_`.  (Deprecated NumPy 1.24)
+  if not isinstance(terminated, (bool, np.bool8)):
+/home/mehark/.local/lib/python3.10/site-packages/tensorboardX/summary.py:153: DeprecationWarning: Conversion of an array with ndim > 0 to a scalar is deprecated, and will error in future. Ensure you extract a single element from your array before performing this operation. (Deprecated NumPy 1.25.)
+  scalar = float(scalar)
+########################
+logging outputs to  /home/mehark/Desktop/code/courses/16831/16831-S26-HW-mehark/hw2/rob831/scripts/../../data/q4_search_b10000_lr0.01_rtg_nnbaseline_HalfCheetah-v4_22-02-2026_19-44-45
+########################
+Using GPU id 0
+
+
+********** Iteration 0 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -85.23950958251953
+Eval_StdReturn : 29.973405838012695
+Eval_MaxReturn : -48.140281677246094
+Eval_MinReturn : -121.54702758789062
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -91.02544403076172
+Train_StdReturn : 34.290008544921875
+Train_MaxReturn : -32.28203582763672
+Train_MinReturn : -189.91403198242188
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 10117
+TimeSinceStart : 23.169014930725098
+Training Loss : -0.07096289843320847
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 1 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -32.39640808105469
+Eval_StdReturn : 38.91535186767578
+Eval_MaxReturn : 22.11086654663086
+Eval_MinReturn : -66.23220825195312
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -83.01177978515625
+Train_StdReturn : 32.752132415771484
+Train_MaxReturn : -6.215692520141602
+Train_MinReturn : -156.09979248046875
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 20234
+TimeSinceStart : 45.98563051223755
+Training Loss : -0.09849894791841507
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 2 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -94.46514892578125
+Eval_StdReturn : 21.08421516418457
+Eval_MaxReturn : -79.40321350097656
+Eval_MinReturn : -124.28221130371094
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -82.1310806274414
+Train_StdReturn : 37.74201202392578
+Train_MaxReturn : -3.072518825531006
+Train_MinReturn : -177.56488037109375
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 30351
+TimeSinceStart : 69.45830035209656
+Training Loss : -0.0675511285662651
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 3 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -81.6926040649414
+Eval_StdReturn : 50.296104431152344
+Eval_MaxReturn : -42.94533920288086
+Eval_MinReturn : -152.72409057617188
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -76.21823120117188
+Train_StdReturn : 31.345401763916016
+Train_MaxReturn : 1.724503993988037
+Train_MinReturn : -194.98175048828125
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 40468
+TimeSinceStart : 92.49061012268066
+Training Loss : -0.09375549852848053
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 4 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -58.285797119140625
+Eval_StdReturn : 38.26545715332031
+Eval_MaxReturn : -19.652645111083984
+Eval_MinReturn : -110.41970825195312
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -77.51504516601562
+Train_StdReturn : 34.808956146240234
+Train_MaxReturn : 0.7607955932617188
+Train_MinReturn : -166.6471710205078
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 50585
+TimeSinceStart : 115.49748492240906
+Training Loss : -0.09535463899374008
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 5 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -56.51079177856445
+Eval_StdReturn : 10.116581916809082
+Eval_MaxReturn : -42.82528305053711
+Eval_MinReturn : -66.96573638916016
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -72.47592163085938
+Train_StdReturn : 36.98385238647461
+Train_MaxReturn : 0.7378571033477783
+Train_MinReturn : -173.13653564453125
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 60702
+TimeSinceStart : 138.7547163963318
+Training Loss : -0.07447298616170883
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 6 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -115.66299438476562
+Eval_StdReturn : 32.31971740722656
+Eval_MaxReturn : -71.55596160888672
+Eval_MinReturn : -148.09791564941406
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -72.32332611083984
+Train_StdReturn : 39.31492233276367
+Train_MaxReturn : 42.998985290527344
+Train_MinReturn : -201.51199340820312
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 70819
+TimeSinceStart : 162.33607292175293
+Training Loss : -0.0681997761130333
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 7 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -79.8311538696289
+Eval_StdReturn : 29.06659507751465
+Eval_MaxReturn : -48.22151184082031
+Eval_MinReturn : -118.39390563964844
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -79.16181945800781
+Train_StdReturn : 38.79743957519531
+Train_MaxReturn : 0.8219184875488281
+Train_MinReturn : -159.78805541992188
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 80936
+TimeSinceStart : 185.73817920684814
+Training Loss : -0.07897599786520004
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 8 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -51.591583251953125
+Eval_StdReturn : 18.305479049682617
+Eval_MaxReturn : -37.34785079956055
+Eval_MinReturn : -77.43437194824219
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -62.2170524597168
+Train_StdReturn : 42.00273895263672
+Train_MaxReturn : 15.524106979370117
+Train_MinReturn : -162.15493774414062
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 91053
+TimeSinceStart : 208.69316911697388
+Training Loss : -0.06894379109144211
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 9 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -41.393863677978516
+Eval_StdReturn : 41.48514175415039
+Eval_MaxReturn : 10.683042526245117
+Eval_MinReturn : -90.83151245117188
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -66.17694854736328
+Train_StdReturn : 36.041690826416016
+Train_MaxReturn : 45.52078628540039
+Train_MinReturn : -145.025390625
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 101170
+TimeSinceStart : 232.0596420764923
+Training Loss : -0.062242668122053146
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 10 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -60.8958854675293
+Eval_StdReturn : 13.987334251403809
+Eval_MaxReturn : -41.66798782348633
+Eval_MinReturn : -74.53280639648438
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -58.181060791015625
+Train_StdReturn : 34.39814376831055
+Train_MaxReturn : 28.364849090576172
+Train_MinReturn : -133.06304931640625
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 111287
+TimeSinceStart : 255.22428584098816
+Training Loss : -0.056844837963581085
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 11 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -72.88785552978516
+Eval_StdReturn : 27.893352508544922
+Eval_MaxReturn : -33.48099136352539
+Eval_MinReturn : -94.1349105834961
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -68.32325744628906
+Train_StdReturn : 32.0853271484375
+Train_MaxReturn : 13.299070358276367
+Train_MinReturn : -149.72113037109375
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 121404
+TimeSinceStart : 278.55920600891113
+Training Loss : -0.08386704325675964
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 12 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -32.99256896972656
+Eval_StdReturn : 7.77305793762207
+Eval_MaxReturn : -26.469295501708984
+Eval_MinReturn : -43.916831970214844
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -58.80948257446289
+Train_StdReturn : 29.041980743408203
+Train_MaxReturn : 4.224641799926758
+Train_MinReturn : -159.779541015625
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 131521
+TimeSinceStart : 301.62139344215393
+Training Loss : -0.07561672478914261
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 13 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -60.70869445800781
+Eval_StdReturn : 7.244776725769043
+Eval_MaxReturn : -53.90000915527344
+Eval_MinReturn : -70.7433853149414
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -63.66838455200195
+Train_StdReturn : 36.4193000793457
+Train_MaxReturn : 39.417537689208984
+Train_MinReturn : -144.3139190673828
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 141638
+TimeSinceStart : 324.76938366889954
+Training Loss : -0.06922433525323868
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 14 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -49.51558303833008
+Eval_StdReturn : 19.310592651367188
+Eval_MaxReturn : -25.174245834350586
+Eval_MinReturn : -72.40879821777344
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -58.24437713623047
+Train_StdReturn : 37.21076202392578
+Train_MaxReturn : 32.429718017578125
+Train_MinReturn : -144.9812469482422
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 151755
+TimeSinceStart : 348.07570219039917
+Training Loss : -0.06367804855108261
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 15 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -60.67999267578125
+Eval_StdReturn : 19.745412826538086
+Eval_MaxReturn : -38.26087951660156
+Eval_MinReturn : -86.306884765625
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -48.208587646484375
+Train_StdReturn : 26.151065826416016
+Train_MaxReturn : 2.215176582336426
+Train_MinReturn : -118.33568572998047
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 161872
+TimeSinceStart : 370.9811940193176
+Training Loss : -0.06234933063387871
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 16 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -68.6402587890625
+Eval_StdReturn : 17.56548500061035
+Eval_MaxReturn : -47.84574508666992
+Eval_MinReturn : -90.80656433105469
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -51.78335952758789
+Train_StdReturn : 30.880542755126953
+Train_MaxReturn : 29.426589965820312
+Train_MinReturn : -113.80485534667969
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 171989
+TimeSinceStart : 394.08545541763306
+Training Loss : -0.10155991464853287
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 17 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -36.92900466918945
+Eval_StdReturn : 18.992141723632812
+Eval_MaxReturn : -10.135384559631348
+Eval_MinReturn : -51.94712829589844
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -51.70734405517578
+Train_StdReturn : 28.06773567199707
+Train_MaxReturn : 23.18418312072754
+Train_MinReturn : -119.38086700439453
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 182106
+TimeSinceStart : 417.4120602607727
+Training Loss : -0.052919868379831314
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 18 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -71.3399658203125
+Eval_StdReturn : 35.538700103759766
+Eval_MaxReturn : -21.239028930664062
+Eval_MinReturn : -99.84307861328125
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -45.3456916809082
+Train_StdReturn : 36.22665023803711
+Train_MaxReturn : 80.0066146850586
+Train_MinReturn : -143.66526794433594
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 192223
+TimeSinceStart : 440.93363785743713
+Training Loss : -0.057740651071071625
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 19 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -75.536865234375
+Eval_StdReturn : 12.332266807556152
+Eval_MaxReturn : -62.17509460449219
+Eval_MinReturn : -91.9246826171875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -49.77543258666992
+Train_StdReturn : 34.08125686645508
+Train_MaxReturn : 28.475154876708984
+Train_MinReturn : -130.77291870117188
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 202340
+TimeSinceStart : 464.27949929237366
+Training Loss : -0.06531727313995361
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 20 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -34.159854888916016
+Eval_StdReturn : 20.223827362060547
+Eval_MaxReturn : -8.111433029174805
+Eval_MinReturn : -57.412193298339844
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -47.441429138183594
+Train_StdReturn : 29.77924156188965
+Train_MaxReturn : 15.324522018432617
+Train_MinReturn : -153.08395385742188
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 212457
+TimeSinceStart : 487.2358958721161
+Training Loss : -0.059787485748529434
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 21 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -74.09835052490234
+Eval_StdReturn : 2.6873745918273926
+Eval_MaxReturn : -70.99058532714844
+Eval_MinReturn : -77.54678344726562
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -48.590763092041016
+Train_StdReturn : 28.420360565185547
+Train_MaxReturn : 22.772172927856445
+Train_MinReturn : -124.61666870117188
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 222574
+TimeSinceStart : 510.6688129901886
+Training Loss : -0.08027525991201401
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 22 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -29.82316780090332
+Eval_StdReturn : 13.52668285369873
+Eval_MaxReturn : -13.887749671936035
+Eval_MinReturn : -46.95622253417969
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -43.36119079589844
+Train_StdReturn : 23.715349197387695
+Train_MaxReturn : 14.385815620422363
+Train_MinReturn : -125.46190643310547
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 232691
+TimeSinceStart : 533.7750914096832
+Training Loss : -0.09861072897911072
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 23 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -25.333236694335938
+Eval_StdReturn : 11.765884399414062
+Eval_MaxReturn : -11.448986053466797
+Eval_MinReturn : -40.217323303222656
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -39.686859130859375
+Train_StdReturn : 23.247400283813477
+Train_MaxReturn : 3.5273561477661133
+Train_MinReturn : -104.95196533203125
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 242808
+TimeSinceStart : 556.7530772686005
+Training Loss : -0.04027999937534332
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 24 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -44.10238265991211
+Eval_StdReturn : 9.04714298248291
+Eval_MaxReturn : -34.174591064453125
+Eval_MinReturn : -56.05594253540039
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -38.98583984375
+Train_StdReturn : 27.503507614135742
+Train_MaxReturn : 15.993682861328125
+Train_MinReturn : -122.28605651855469
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 252925
+TimeSinceStart : 579.8380160331726
+Training Loss : -0.07695227116346359
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 25 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -55.282806396484375
+Eval_StdReturn : 21.944528579711914
+Eval_MaxReturn : -24.249319076538086
+Eval_MinReturn : -70.98779296875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -39.3895263671875
+Train_StdReturn : 21.278995513916016
+Train_MaxReturn : 22.13637924194336
+Train_MinReturn : -103.32469177246094
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 263042
+TimeSinceStart : 603.172087430954
+Training Loss : -0.06911768764257431
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 26 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -41.76707077026367
+Eval_StdReturn : 31.497159957885742
+Eval_MaxReturn : -6.535083770751953
+Eval_MinReturn : -82.98680877685547
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -41.49850082397461
+Train_StdReturn : 26.27183723449707
+Train_MaxReturn : 23.33433723449707
+Train_MinReturn : -152.96949768066406
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 273159
+TimeSinceStart : 626.8883039951324
+Training Loss : -0.05534089356660843
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 27 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -30.51810646057129
+Eval_StdReturn : 11.734013557434082
+Eval_MaxReturn : -18.39676284790039
+Eval_MinReturn : -46.393836975097656
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -37.02376937866211
+Train_StdReturn : 29.243192672729492
+Train_MaxReturn : 15.785581588745117
+Train_MinReturn : -134.68096923828125
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 283276
+TimeSinceStart : 650.1351425647736
+Training Loss : -0.07297555357217789
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 28 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -42.30524826049805
+Eval_StdReturn : 44.45068359375
+Eval_MaxReturn : -0.12692832946777344
+Eval_MinReturn : -103.76193237304688
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -28.373600006103516
+Train_StdReturn : 24.415000915527344
+Train_MaxReturn : 41.21861267089844
+Train_MinReturn : -80.76030731201172
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 293393
+TimeSinceStart : 673.0485544204712
+Training Loss : -0.08131527155637741
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 29 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -27.87701988220215
+Eval_StdReturn : 29.599925994873047
+Eval_MaxReturn : 13.56794548034668
+Eval_MinReturn : -53.695526123046875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -31.028200149536133
+Train_StdReturn : 27.456523895263672
+Train_MaxReturn : 26.867589950561523
+Train_MinReturn : -95.40361022949219
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 303510
+TimeSinceStart : 695.9623417854309
+Training Loss : -0.09910685569047928
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 30 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -59.916290283203125
+Eval_StdReturn : 20.755952835083008
+Eval_MaxReturn : -40.310523986816406
+Eval_MinReturn : -88.63807678222656
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -31.671167373657227
+Train_StdReturn : 24.837080001831055
+Train_MaxReturn : 35.96424102783203
+Train_MinReturn : -92.8045425415039
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 313627
+TimeSinceStart : 718.8814158439636
+Training Loss : -0.07244204729795456
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 31 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -32.04476547241211
+Eval_StdReturn : 15.488204002380371
+Eval_MaxReturn : -12.292558670043945
+Eval_MinReturn : -50.11930847167969
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -35.602603912353516
+Train_StdReturn : 25.915843963623047
+Train_MaxReturn : 26.199907302856445
+Train_MinReturn : -111.59333801269531
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 323744
+TimeSinceStart : 741.7867069244385
+Training Loss : -0.06686872988939285
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 32 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -19.852449417114258
+Eval_StdReturn : 4.983505725860596
+Eval_MaxReturn : -13.559091567993164
+Eval_MinReturn : -25.746532440185547
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -33.04224395751953
+Train_StdReturn : 29.064207077026367
+Train_MaxReturn : 39.02061462402344
+Train_MinReturn : -128.2242431640625
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 333861
+TimeSinceStart : 764.7019386291504
+Training Loss : -0.08282182365655899
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 33 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -29.519445419311523
+Eval_StdReturn : 5.910445213317871
+Eval_MaxReturn : -22.255691528320312
+Eval_MinReturn : -36.73300552368164
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -28.397764205932617
+Train_StdReturn : 30.514726638793945
+Train_MaxReturn : 37.83441162109375
+Train_MinReturn : -133.98423767089844
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 343978
+TimeSinceStart : 788.0106995105743
+Training Loss : -0.08781830966472626
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 34 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -3.1568377017974854
+Eval_StdReturn : 2.5158963203430176
+Eval_MaxReturn : 0.37489891052246094
+Eval_MinReturn : -5.296509265899658
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -25.306232452392578
+Train_StdReturn : 31.93651008605957
+Train_MaxReturn : 48.26805114746094
+Train_MinReturn : -143.36727905273438
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 354095
+TimeSinceStart : 811.829913854599
+Training Loss : -0.08918816596269608
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 35 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -22.339956283569336
+Eval_StdReturn : 36.01301956176758
+Eval_MaxReturn : 19.650304794311523
+Eval_MinReturn : -68.29545593261719
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -29.69039535522461
+Train_StdReturn : 29.914377212524414
+Train_MaxReturn : 57.45338439941406
+Train_MinReturn : -148.77346801757812
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 364212
+TimeSinceStart : 836.9764416217804
+Training Loss : -0.09064308553934097
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 36 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -22.975746154785156
+Eval_StdReturn : 9.484827041625977
+Eval_MaxReturn : -9.579980850219727
+Eval_MinReturn : -30.271982192993164
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -22.267580032348633
+Train_StdReturn : 29.90968894958496
+Train_MaxReturn : 20.416336059570312
+Train_MinReturn : -124.6507568359375
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 374329
+TimeSinceStart : 864.0337154865265
+Training Loss : -0.046046189963817596
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 37 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -49.04946517944336
+Eval_StdReturn : 10.986074447631836
+Eval_MaxReturn : -33.51423645019531
+Eval_MinReturn : -56.999481201171875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -24.76226806640625
+Train_StdReturn : 22.694652557373047
+Train_MaxReturn : 37.24711990356445
+Train_MinReturn : -72.59305572509766
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 384446
+TimeSinceStart : 891.3039035797119
+Training Loss : -0.08233395218849182
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 38 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -13.513945579528809
+Eval_StdReturn : 38.40275955200195
+Eval_MaxReturn : 40.40288162231445
+Eval_MinReturn : -46.11943054199219
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -17.604232788085938
+Train_StdReturn : 21.90587615966797
+Train_MaxReturn : 39.133358001708984
+Train_MinReturn : -61.34310531616211
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 394563
+TimeSinceStart : 918.4617931842804
+Training Loss : -0.09474392235279083
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 39 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -0.7525749206542969
+Eval_StdReturn : 33.38734436035156
+Eval_MaxReturn : 43.19916534423828
+Eval_MinReturn : -37.6701774597168
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -22.588245391845703
+Train_StdReturn : 21.789724349975586
+Train_MaxReturn : 17.649890899658203
+Train_MinReturn : -94.85633850097656
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 404680
+TimeSinceStart : 945.3401021957397
+Training Loss : -0.03196641430258751
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 40 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 29.246347427368164
+Eval_StdReturn : 8.431185722351074
+Eval_MaxReturn : 39.4913330078125
+Eval_MinReturn : 18.841094970703125
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -23.455604553222656
+Train_StdReturn : 27.512653350830078
+Train_MaxReturn : 39.12812042236328
+Train_MinReturn : -114.68798065185547
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 414797
+TimeSinceStart : 972.2011282444
+Training Loss : -0.05234604701399803
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 41 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -7.6743950843811035
+Eval_StdReturn : 18.058212280273438
+Eval_MaxReturn : 10.168487548828125
+Eval_MinReturn : -32.41899108886719
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -18.94488525390625
+Train_StdReturn : 25.190481185913086
+Train_MaxReturn : 21.203655242919922
+Train_MinReturn : -104.95948791503906
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 424914
+TimeSinceStart : 999.2821865081787
+Training Loss : -0.06676166504621506
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 42 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -7.883158206939697
+Eval_StdReturn : 23.496458053588867
+Eval_MaxReturn : 12.282326698303223
+Eval_MinReturn : -40.83816146850586
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -13.186203956604004
+Train_StdReturn : 20.591720581054688
+Train_MaxReturn : 30.18640899658203
+Train_MinReturn : -61.27358627319336
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 435031
+TimeSinceStart : 1026.367660999298
+Training Loss : -0.08448504656553268
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 43 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 0.7023970484733582
+Eval_StdReturn : 22.455381393432617
+Eval_MaxReturn : 32.385597229003906
+Eval_MinReturn : -17.009334564208984
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -12.96202564239502
+Train_StdReturn : 20.254911422729492
+Train_MaxReturn : 31.020299911499023
+Train_MinReturn : -61.88361358642578
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 445148
+TimeSinceStart : 1053.5195653438568
+Training Loss : -0.0668216347694397
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 44 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -31.1848087310791
+Eval_StdReturn : 5.4424309730529785
+Eval_MaxReturn : -24.72769546508789
+Eval_MinReturn : -38.04094696044922
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -12.437560081481934
+Train_StdReturn : 23.014556884765625
+Train_MaxReturn : 34.73352813720703
+Train_MinReturn : -78.8636474609375
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 455265
+TimeSinceStart : 1080.6089355945587
+Training Loss : -0.06334664672613144
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 45 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -11.489670753479004
+Eval_StdReturn : 33.570274353027344
+Eval_MaxReturn : 31.26541519165039
+Eval_MinReturn : -50.74029541015625
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -6.173970699310303
+Train_StdReturn : 26.44776725769043
+Train_MaxReturn : 49.266014099121094
+Train_MinReturn : -87.34873962402344
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 465382
+TimeSinceStart : 1107.712812423706
+Training Loss : -0.05206857994198799
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 46 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : -22.07683753967285
+Eval_StdReturn : 26.7766170501709
+Eval_MaxReturn : 4.948606967926025
+Eval_MinReturn : -58.561279296875
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -2.142030954360962
+Train_StdReturn : 27.34823989868164
+Train_MaxReturn : 82.08963012695312
+Train_MinReturn : -70.79422760009766
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 475499
+TimeSinceStart : 1134.7920486927032
+Training Loss : -0.08557379245758057
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 47 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 2.5497143268585205
+Eval_StdReturn : 23.524473190307617
+Eval_MaxReturn : 35.24992370605469
+Eval_MinReturn : -19.103544235229492
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : -6.513402462005615
+Train_StdReturn : 25.570810317993164
+Train_MaxReturn : 59.76039123535156
+Train_MinReturn : -71.14122009277344
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 485616
+TimeSinceStart : 1162.3272035121918
+Training Loss : -0.0842076912522316
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 48 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 7.999919414520264
+Eval_StdReturn : 18.21278953552246
+Eval_MaxReturn : 21.060625076293945
+Eval_MinReturn : -17.755990982055664
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 8.747273445129395
+Train_StdReturn : 23.120155334472656
+Train_MaxReturn : 59.288185119628906
+Train_MinReturn : -49.36482238769531
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 495733
+TimeSinceStart : 1186.972725391388
+Training Loss : -0.041899774223566055
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 49 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 10.35352611541748
+Eval_StdReturn : 14.058009147644043
+Eval_MaxReturn : 26.838584899902344
+Eval_MinReturn : -7.513117790222168
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 11.564462661743164
+Train_StdReturn : 30.740325927734375
+Train_MaxReturn : 79.34132385253906
+Train_MinReturn : -118.11784362792969
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 505850
+TimeSinceStart : 1210.9096865653992
+Training Loss : -0.11415193974971771
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 50 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 7.845590114593506
+Eval_StdReturn : 30.579593658447266
+Eval_MaxReturn : 51.04871368408203
+Eval_MinReturn : -15.424761772155762
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 9.247882843017578
+Train_StdReturn : 33.281620025634766
+Train_MaxReturn : 89.31060028076172
+Train_MinReturn : -92.40275573730469
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 515967
+TimeSinceStart : 1235.3783435821533
+Training Loss : -0.04022985324263573
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 51 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 14.262129783630371
+Eval_StdReturn : 11.069192886352539
+Eval_MaxReturn : 28.61149024963379
+Eval_MinReturn : 1.6687374114990234
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 12.04639720916748
+Train_StdReturn : 32.30213165283203
+Train_MaxReturn : 77.82662200927734
+Train_MinReturn : -99.9189224243164
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 526084
+TimeSinceStart : 1260.6204249858856
+Training Loss : -0.08358553797006607
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 52 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000At timestep:     4077 / 10000At timestep:     4228 / 10000At timestep:     4379 / 10000At timestep:     4530 / 10000At timestep:     4681 / 10000At timestep:     4832 / 10000At timestep:     4983 / 10000At timestep:     5134 / 10000At timestep:     5285 / 10000At timestep:     5436 / 10000At timestep:     5587 / 10000At timestep:     5738 / 10000At timestep:     5889 / 10000At timestep:     6040 / 10000At timestep:     6191 / 10000At timestep:     6342 / 10000At timestep:     6493 / 10000At timestep:     6644 / 10000At timestep:     6795 / 10000At timestep:     6946 / 10000At timestep:     7097 / 10000At timestep:     7248 / 10000At timestep:     7399 / 10000At timestep:     7550 / 10000At timestep:     7701 / 10000At timestep:     7852 / 10000At timestep:     8003 / 10000At timestep:     8154 / 10000At timestep:     8305 / 10000At timestep:     8456 / 10000At timestep:     8607 / 10000At timestep:     8758 / 10000At timestep:     8909 / 10000At timestep:     9060 / 10000At timestep:     9211 / 10000At timestep:     9362 / 10000At timestep:     9513 / 10000At timestep:     9664 / 10000At timestep:     9815 / 10000At timestep:     9966 / 10000At timestep:     10117 / 10000
+Beginning logging procedure...
+
+Collecting data for eval...
+At timestep:     151 / 400At timestep:     302 / 400At timestep:     453 / 400Eval_AverageReturn : 15.349461555480957
+Eval_StdReturn : 17.120624542236328
+Eval_MaxReturn : 36.18516540527344
+Eval_MinReturn : -5.749153137207031
+Eval_AverageEpLen : 151.0
+Train_AverageReturn : 18.285764694213867
+Train_StdReturn : 41.24714279174805
+Train_MaxReturn : 110.4276123046875
+Train_MinReturn : -110.2180404663086
+Train_AverageEpLen : 151.0
+Train_EnvstepsSoFar : 536201
+TimeSinceStart : 1287.1635541915894
+Training Loss : -0.05956030637025833
+Initial_DataCollection_AverageReturn : -91.02544403076172
+Done logging...
+
+
+
+
+********** Iteration 53 ************
+
+Collecting data to be used for training...
+At timestep:     151 / 10000At timestep:     302 / 10000At timestep:     453 / 10000At timestep:     604 / 10000At timestep:     755 / 10000At timestep:     906 / 10000At timestep:     1057 / 10000At timestep:     1208 / 10000At timestep:     1359 / 10000At timestep:     1510 / 10000At timestep:     1661 / 10000At timestep:     1812 / 10000At timestep:     1963 / 10000At timestep:     2114 / 10000At timestep:     2265 / 10000At timestep:     2416 / 10000At timestep:     2567 / 10000At timestep:     2718 / 10000At timestep:     2869 / 10000At timestep:     3020 / 10000At timestep:     3171 / 10000At timestep:     3322 / 10000At timestep:     3473 / 10000At timestep:     3624 / 10000At timestep:     3775 / 10000At timestep:     3926 / 10000
