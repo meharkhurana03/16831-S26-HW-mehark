@@ -26,7 +26,12 @@ for d in sorted(os.listdir(DATA_DIR)):
     steps = np.array([e.step for e in evs])
     values = np.array([e.value for e in evs])
 
-    ax.plot(steps, values, label='b=%d, lr=%s' % (b, lr))
+    highlight = (b == 2000 and lr == 0.02)
+    ax.plot(steps, values, label='b=%d, lr=%s' % (b, lr),
+            color='black' if highlight else None,
+            linewidth=2.0 if highlight else 1.0,
+            alpha=1.0 if highlight else 0.35,
+            zorder=10 if highlight else 1)
 
 ax.axhline(1000, color='gray', linestyle='--', linewidth=1, label='Optimum (1000)')
 ax.set_xlabel('Iteration')

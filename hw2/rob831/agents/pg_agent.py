@@ -51,7 +51,14 @@ class PGAgent(BaseAgent):
         q_values = self.calculate_q_vals(rewards_list)
 
         advantages = self.estimate_advantage(observations, rewards_list, q_values, terminals)
-        train_log = self.actor.update(observations, actions, advantages, q_values=q_values)
+
+        train_log = self.actor.update(
+            observations,
+            actions,
+            advantages,
+            q_values=q_values,
+            num_grad_steps_per_batch=self.agent_params['num_grad_steps_per_batch']
+        )
 
 
         return train_log

@@ -136,7 +136,14 @@ class MLPPolicyPG(MLPPolicy):
         super().__init__(ac_dim, ob_dim, n_layers, size, **kwargs)
         self.baseline_loss = nn.MSELoss()
 
-    def update(self, observations, actions, advantages, q_values=None):
+    def update(
+        self,
+        observations,
+        actions,
+        advantages,
+        q_values=None,
+        num_grad_steps_per_batch=1,
+    ):
         observations = ptu.from_numpy(observations)
         actions = ptu.from_numpy(actions)
         advantages = ptu.from_numpy(advantages)
@@ -152,13 +159,14 @@ class MLPPolicyPG(MLPPolicy):
             # 'zero_grad' first
 
         # raise NotImplementedError
-        self.optimizer.zero_grad()
-        action_dist = self(observations)
-        log_probs = action_dist.log_prob(actions)
-
-        policy_loss = -(log_probs*advantages).mean()
-        policy_loss.backward()
-        self.optimizer.step()
+        for grad_step in range(num_grad_steps_per_batch):
+            self.optimizer.zero_grad()
+            action_dist = self(observations)
+            log_probs = action_dist.log_prob(actions)
+            
+            policy_loss = -(log_probs*advantages).mean()
+            policy_loss.backward()
+            self.optimizer.step()
 
         if self.nn_baseline:
             ## TODO: update the neural network baseline using the q_values as
@@ -177,13 +185,14 @@ class MLPPolicyPG(MLPPolicy):
             # then convert to tensor using ptu
             targets = ptu.from_numpy(targets)
 
-            predictions = self.baseline(observations).squeeze()
-            baseline_loss = self.baseline_loss(predictions, targets)
+            for _ in range(num_grad_steps_per_batch):
+                self.baseline_optimizer.zero_grad()
+                predictions = self.baseline(observations).squeeze()
 
-            # use the optimizer to update the baseline MLP
-            self.baseline_optimizer.zero_grad()
-            baseline_loss.backward()
-            self.baseline_optimizer.step()
+                # use the optimizer to update the baseline MLP
+                baseline_loss = self.baseline_loss(predictions, targets)
+                baseline_loss.backward()
+                self.baseline_optimizer.step()
 
         train_log = {
             'Training Loss': ptu.to_numpy(policy_loss),

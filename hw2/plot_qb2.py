@@ -9,19 +9,11 @@ METRIC = 'Eval_AverageReturn'
 
 fig, ax = plt.subplots(figsize=(8, 5))
 
-seen = {}
 for d in sorted(os.listdir(DATA_DIR)):
-    if not d.startswith('q4_') or d.endswith('.log'):
+    if not d.startswith('qb2_') or not os.path.isdir(os.path.join(DATA_DIR, d)):
         continue
-    if '_rtg' not in d or '_nnbaseline' not in d:
-        continue
-    m = re.search(r'_b(\d+)_lr([\d.]+)', d)
-    if not m:
-        continue
-    b, lr = int(m.group(1)), float(m.group(2))
-    label = 'b=%d, lr=%s' % (b, lr)
-    if label in seen:
-        continue  # keep first run only
+    m = re.search(r'_ngspb(\d+)', d)
+    label = ('ngspb=%s' % m.group(1)) if m else d
 
     ea = EventAccumulator(os.path.join(DATA_DIR, d))
     ea.Reload()
@@ -32,15 +24,14 @@ for d in sorted(os.listdir(DATA_DIR)):
     steps = np.array([e.step for e in evs])
     values = np.array([e.value for e in evs])
 
-    seen[label] = True
     ax.plot(steps, values, label=label)
 
 ax.set_xlabel('Iteration')
 ax.set_ylabel(METRIC)
-ax.set_title('Q4: HalfCheetah-v4 Sweep (RTG + NN Baseline)')
+ax.set_title('Qb2: Multi-step PG (CartPole-v0, b=5000, lr=0.001)')
 ax.legend(fontsize=9)
 ax.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig('fig_q4.png', dpi=150, bbox_inches='tight')
-print('Saved fig_q4.png')
+plt.savefig('fig_qb2.png', dpi=150, bbox_inches='tight')
+print('Saved fig_qb2.png')
 plt.show()

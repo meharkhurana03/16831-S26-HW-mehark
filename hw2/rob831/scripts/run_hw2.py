@@ -27,7 +27,8 @@ class PG_Trainer(object):
         }
 
         train_args = {
-            'num_agent_train_steps_per_iter': params['num_agent_train_steps_per_iter'],
+            'num_agent_train_steps_per_iter': params['num_agent_train_steps_per_iter'], 
+            'num_grad_steps_per_batch': params['num_grad_steps_per_batch']
         }
 
         agent_params = {**computation_graph_args, **estimate_advantage_args, **train_args}
@@ -85,6 +86,7 @@ def main():
     parser.add_argument('--action_noise_std', type=float, default=0)
 
     parser.add_argument('--parallel_workers', type=int, default=1)
+    parser.add_argument('--num_grad_steps_per_batch', type=int, default=1)
 
     args = parser.parse_args()
 
