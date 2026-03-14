@@ -96,8 +96,10 @@ class BootstrappedContinuousCritic(nn.Module, BaseCritic):
 
         for step in range(total_steps):
             if step % self.num_grad_steps_per_target_update==0:
-                V_sp1 = self.forward(torch_next_ob_no)
+                V_sp1 = self(torch_next_ob_no)
                 target = torch_reward_n + self.gamma*V_sp1*(1 - torch_terminal_n)
+
+                target = target.detach()
 
             V_s = self.forward(torch_ob_no)
             loss = self.loss(V_s, target)
