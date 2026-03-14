@@ -90,4 +90,4 @@ if __name__ == '__main__':
     plt.tight_layout()
     plt.savefig(args.out, dpi=150)
 
-    print(f'Saved → {args.out}')
+    print(f'Saved at {args.out}')
