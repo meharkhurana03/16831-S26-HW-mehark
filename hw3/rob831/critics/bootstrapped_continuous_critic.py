@@ -87,4 +87,23 @@ class BootstrappedContinuousCritic(nn.Module, BaseCritic):
         # HINT: make sure to squeeze the output of the critic_network to ensure
         #       that its dimensions match the reward
 
+        total_steps = self.num_grad_steps_per_target_update*self.num_target_updates
+
+        torch_ob_no = ptu.from_numpy(ob_no)
+        torch_next_ob_no = ptu.from_numpy(next_ob_no)
+        torch_reward_n = ptu.from_numpy(reward_n)
+        torch_terminal_n = ptu.from_numpy(terminal_n)
+
+        for step in range(total_steps):
+            if step % self.num_grad_steps_per_target_update==0:
+                V_sp1 = self.forward(torch_next_ob_no)
+                target = torch_reward_n + self.gamma*V_sp1*(1 - torch_terminal_n)
+
+            V_s = self.forward(torch_ob_no)
+            loss = self.loss(V_s, target)
+
+            self.optimizer.zero_grad()
+            loss.backward()
+            self.optimizer.step()
+
         return loss.item()
