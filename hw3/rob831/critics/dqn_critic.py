@@ -78,7 +78,9 @@ class DQNCritic(BaseCritic):
             # and page 4 of https://arxiv.org/pdf/1509.06461.pdf is also a good reference.
             # TODO
             action_tp1 = self.q_net(next_ob_no).argmax(dim=1, keepdim=True)
-            action_tp1 = action_tp1.unsqueeze(1)
+            # action_tp1_unsqueezed = action_tp1.unsqueeze(1)
+            # print(qa_tp1_values.shape)
+            # print(action_tp1_unsqueezed.shape)
             q_tp1 = torch.gather(qa_tp1_values, 1, action_tp1).squeeze(1)
         else:
             q_tp1, _ = qa_tp1_values.max(dim=1)
