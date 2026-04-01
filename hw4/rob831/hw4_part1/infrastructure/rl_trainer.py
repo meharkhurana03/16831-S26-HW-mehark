@@ -165,7 +165,8 @@ class RL_Trainer(object):
                         # learned dynamics model. Add this trajectory to the correct replay buffer.
                         # HINT: Look at collect_model_trajectory and add_to_replay_buffer from MBPOAgent.
                         # HINT: Use the from_model argument to ensure the paths are added to the correct buffer.
-                        pass
+                        model_paths = self.agent.collect_model_trajectory(self.params['mbpo_rollout_length'])
+                        self.agent.add_to_replay_buffer(model_paths, from_model=True)
                     # train the SAC agent
                     self.train_sac_agent()
 
@@ -237,7 +238,10 @@ class RL_Trainer(object):
         # 1) sample a batch of data of size self.sac_params['train_batch_size'] with self.agent.sample_sac
         # 2) train the SAC agent self.agent.train_sac
         # HINT: This will look similar to train_agent above.
-        pass
+        
+        for _ in range(self.sac_params['num_agent_train_steps_per_iter']):
+            ob, ac, rew, next_ob, terminal = self.agent.sample_sac(self.sac_params['train_batch_size'])
+            self.agent.train_sac(ob, ac, rew, next_ob, terminal)
 
     ####################################
     ####################################

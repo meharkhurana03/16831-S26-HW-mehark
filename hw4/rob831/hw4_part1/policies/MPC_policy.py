@@ -53,12 +53,20 @@ class MPCPolicy(BasePolicy):
             # TODO(Q1) uniformly sample trajectories and return an array of
             # dimensions (num_sequences, horizon, self.ac_dim) in the range
             # [self.low, self.high]
+
+            random_action_sequences = np.random.uniform(
+                self.low, self.high, size=(num_sequences, horizon, self.ac_dim))
             return random_action_sequences
+        
         elif self.sample_strategy == 'cem':
             # TODO(Q5): Implement action selection using CEM.
             # Begin with randomly selected actions, then refine the sampling distribution
             # iteratively as described in Section 3.3, "Iterative Random-Shooting with Refinement" of
-            # https://arxiv.org/pdf/1909.11652.pdf 
+            # https://arxiv.org/pdf/1909.11652.pdf
+
+            mean = np.zeros((horizon, self.ac_dim))
+            variance = np.ones((horizon, self.ac_dim))
+
             for i in range(self.cem_iterations):
                 # - Sample candidate sequences from a Gaussian with the current 
                 #   elite mean and variance
@@ -68,10 +76,23 @@ class MPCPolicy(BasePolicy):
                 #     (Hint: what existing function can we use to compute rewards for
                 #      our candidate sequences in order to rank them?)
                 # - Update the elite mean and variance
-                pass
+
+                if i == 0:
+                    candidate_action_sequences = self.sample_action_sequences(num_sequences, horizon)
+                else:
+                    candidate_action_sequences = np.random.normal(mean, np.sqrt(variance), size=(num_sequences, horizon, self.ac_dim))
+                    candidate_action_sequences = np.clip(candidate_action_sequences, self.low, self.high)
+
+                rewards = self.evaluate_candidate_sequences(candidate_action_sequences, obs)
+
+                elite_indices = np.argsort(rewards)[-self.cem_num_elites:]
+                elites = candidate_action_sequences[elite_indices]
+
+                mean = self.cem_alpha*np.mean(elites, axis=0) + (1 - self.cem_alpha)*mean
+                variance = self.cem_alpha*np.var(elites, axis=0) + (1 - self.cem_alpha)*variance
 
             # TODO(Q5): Set `cem_action` to the appropriate action chosen by CEM
-            cem_action = None
+            cem_action = mean
 
             return cem_action[None]
         else:
@@ -83,10 +104,17 @@ class MPCPolicy(BasePolicy):
         #
         # Then, return the mean predictions across all ensembles.
         # Hint: the return value should be an array of shape (N,)
-        for model in self.dyn_models: 
-            pass
+        # for model in self.dyn_models: 
+        #     pass
 
-        return TODO
+        # return TODO
+
+        predicted_rewards_per_model = []
+        for model in self.dyn_models:
+            rewards = self.calculate_sum_of_rewards(obs, candidate_action_sequences, model)
+            predicted_rewards_per_model.append(rewards)
+        
+        return np.mean(predicted_rewards_per_model, axis=0)
 
     def get_action(self, obs):
         if self.data_statistics is None:
@@ -103,8 +131,8 @@ class MPCPolicy(BasePolicy):
             predicted_rewards = self.evaluate_candidate_sequences(candidate_action_sequences, obs)
 
             # pick the action sequence and return the 1st element of that sequence
-            best_action_sequence = None  # TODO (Q2)
-            action_to_take = None  # TODO (Q2)
+            best_action_sequence = candidate_action_sequences[np.argmax(predicted_rewards)]  # TODO (Q2)
+            action_to_take = best_action_sequence[0]  # TODO (Q2)
             return action_to_take[None]  # Unsqueeze the first index
 
     def calculate_sum_of_rewards(self, obs, candidate_action_sequences, model):
@@ -120,16 +148,28 @@ class MPCPolicy(BasePolicy):
         :return: numpy array with the sum of rewards for each action sequence.
         The array should have shape [N].
         """
-        sum_of_rewards = None  # TODO (Q2)
-        # For each candidate action sequence, predict a sequence of
-        # states for each dynamics model in your ensemble.
-        # Once you have a sequence of predicted states from each model in
-        # your ensemble, calculate the sum of rewards for each sequence
-        # using `self.env.get_reward(predicted_obs, action)`
-        # You should sum across `self.horizon` time step.
-        # Hint: you should use model.get_prediction and you shouldn't need
-        #       to import pytorch in this file.
-        # Hint: Remember that the model can process observations and actions
-        #       in batch, which can be much faster than looping through each
-        #       action sequence.
+        # sum_of_rewards = None  # TODO (Q2)
+        # # For each candidate action sequence, predict a sequence of
+        # # states for each dynamics model in your ensemble.
+        # # Once you have a sequence of predicted states from each model in
+        # # your ensemble, calculate the sum of rewards for each sequence
+        # # using `self.env.get_reward(predicted_obs, action)`
+        # # You should sum across `self.horizon` time step.
+        # # Hint: you should use model.get_prediction and you shouldn't need
+        # #       to import pytorch in this file.
+        # # Hint: Remember that the model can process observations and actions
+        # #       in batch, which can be much faster than looping through each
+        # #       action sequence.
+
+        Nseq = candidate_action_sequences.shape[0]
+        sum_of_rewards = np.zeros(Nseq)
+        # Tile the current obs across all N sequences: shape (Nseq, D_obs)
+        current_obs = np.tile(obs, (Nseq,1))
+
+        for h in range(self.horizon):
+            actions = candidate_action_sequences[:, h, :]  # (N, D_action)
+            rewards, _ = self.env.get_reward(current_obs, actions)
+            sum_of_rewards += rewards
+            current_obs = model.get_prediction(current_obs, actions, self.data_statistics)
+        
         return sum_of_rewards
