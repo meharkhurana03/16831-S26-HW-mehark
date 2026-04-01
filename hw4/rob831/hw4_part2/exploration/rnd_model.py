@@ -26,10 +26,25 @@ class RNDModel(nn.Module, BaseExplorationModel):
         # 1) f, the random function we are trying to learn
         # 2) f_hat, the function we are using to learn f
 
+        self.f = ptu.build_mlp(self.ob_dim, self.output_size, self.n_layers, self.size, init_method=init_method_1)
+        self.f_hat = ptu.build_mlp(self.ob_dim, self.output_size, self.n_layers, self.size, init_method=init_method_2)
+        self.f.to(ptu.device)
+        self.f_hat.to(ptu.device)
+        self.optimizer = self.optimizer_spec.constructor(
+            self.f_hat.parameters(),
+            **self.optimizer_spec.optim_kwargs
+        )
+        self.learning_rate_scheduler = optim.lr_scheduler.LambdaLR(
+            self.optimizer,
+            self.optimizer_spec.learning_rate_schedule,
+        )
+
     def forward(self, ob_no):
         # <TODO>: Get the prediction error for ob_no
         # HINT: Remember to detach the output of self.f!
-        pass
+
+        error = torch.norm(self.f_hat(ob_no) - self.f(ob_no).detach(), dim=1)
+        return error
 
     def forward_np(self, ob_no):
         ob_no = ptu.from_numpy(ob_no)
@@ -39,4 +54,11 @@ class RNDModel(nn.Module, BaseExplorationModel):
     def update(self, ob_no):
         # <TODO>: Update f_hat using ob_no
         # Hint: Take the mean prediction error across the batch
-        pass
+
+        ob_no = ptu.from_numpy(ob_no)
+        loss = self(ob_no).mean()
+        self.optimizer.zero_grad()
+        loss.backward()
+        self.optimizer.step()
+        self.learning_rate_scheduler.step()
+        return loss.item()
